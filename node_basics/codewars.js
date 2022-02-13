@@ -114,15 +114,15 @@ const strSplicer = function (arr, n) {
   return finalOutput.join("");
 };
 
-// function getMiddle(str) {
-//   const strToArr = str.split("");
-//   console.log(strToArr.length);
-//   if (strToArr.length % 2 === 0) {
-//     return strSplicer(strToArr, 3);
-//   } else {
-//     return strSplicer(strToArr, 2);
-//   }
-// }
+function getMiddle(str) {
+  const strToArr = str.split("");
+  console.log(strToArr.length);
+  if (strToArr.length % 2 === 0) {
+    return strSplicer(strToArr, 3);
+  } else {
+    return strSplicer(strToArr, 2);
+  }
+}
 
 const str = "test";
 const arr = str.split("");
