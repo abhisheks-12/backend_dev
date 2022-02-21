@@ -129,3 +129,15 @@ const arr = str.split("");
 console.log(strSplicer(arr,3));
 
 // https://www.codewars.com/kata/56747fd5cb988479af000028/train/javascript
+
+// solution('abc') // should return ['ab', 'c_']
+// solution('abcdef') // should return ['ab', 'cd', 'ef']
+
+function solution(str) {
+  if (str.length % 2 === 0) {
+  } else {
+  }
+}
+
+const str = "abc";
+console.log(str.slice(0,2));
