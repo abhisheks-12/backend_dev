@@ -12,11 +12,11 @@ const { readFile, writeFile } = require("fs").promises;
 
 const start = async () => {
   try {
-    // const first = readFilePromise("./content/subfolder/first.txt", "utf8");  ----->>>>> this is using util.promisify(readFile)
-    // const second = readFilePromise("./content/subfolder/second.txt", "utf8");
+    // const first = await readFilePromise("./content/subfolder/first.txt", "utf8");  ----->>>>> this is using util.promisify(readFile)
+    // const second = await readFilePromise("./content/subfolder/second.txt", "utf8");
 
-    const first = readFile("./content/subfolder/first.txt", "utf8");
-    const second = readFile("./content/subfolder/second.txt", "utf8");
+    const first = await readFile("./content/subfolder/first.txt", "utf8");
+    const second = await readFile("./content/subfolder/second.txt", "utf8");
 
     console.log(second);
 
@@ -30,3 +30,5 @@ const start = async () => {
 };
 
 start();
+
+const 
