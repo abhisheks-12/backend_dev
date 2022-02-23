@@ -1,13 +1,9 @@
-// Using  Event Emitter API
-
-
 const http = require("http");
+const { readFileSync, read } = require("fs");
 
-const server = http.createServer();
-// emits request event 
-// response to event
-server.on("request", (req, res) => {
-  res.end("welcome");
+const server = http.createServer((req, res) => {
+  const text = readFileSync("./content/subfolder/big.txt", "utf8");
+  res.end(text);
 });
 
-server.listen(5000);
+server.listen(5001);
