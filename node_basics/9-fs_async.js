@@ -1,7 +1,6 @@
 // fs async
 const { readFile, writeFile } = require("fs");
 
-
 // -------------------->>>>>>> callback hell
 
 readFile("./content/subfolder/first.txt", "utf8", (err, resolve) => {
@@ -27,9 +26,8 @@ readFile("./content/subfolder/first.txt", "utf8", (err, resolve) => {
   });
 });
 
-
 // reading and writing using promise
-////////////////////////////////////         for  refernce promises behind the scence 
+////////////////////////////////////         for  refernce promises behind the scence
 
 const { readFile } = require("fs");
 
@@ -61,8 +59,3 @@ const start = async () => {
 };
 
 start();
-
-
-
-
-

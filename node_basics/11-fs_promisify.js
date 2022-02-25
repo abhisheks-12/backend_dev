@@ -1,5 +1,3 @@
-
-
 /////////////////////////////////////////     By using util.promisify ////////////////////////
 
 // const { readFile, writeFile } = require("fs");
@@ -30,5 +28,3 @@ const start = async () => {
 };
 
 start();
-
-const 
