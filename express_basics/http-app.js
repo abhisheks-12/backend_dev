@@ -10,21 +10,6 @@
 // app.use ---> middleware
 // app.listen ----> listen to server on specific port
 
-// app.get("/", (req, res) => {
-//   res.status(200).send("Home Page");
-// });
-
-// app.get("/about", (req, res) => {
-//   res.status(200).send("About us");
-// });
-
-// app.all("*", (req, res) => {
-//   res.status(404).send("<h1>Resuorces not found</h1>");
-// });
-
-// app.listen(5000, () => {
-//   console.log("server is listening on port 5000");
-// });
 
 const express = require("express");
 const app = express();
