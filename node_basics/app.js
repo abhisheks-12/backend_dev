@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 const http = require("http");
 
 const server = http.createServer((req, res) => {
@@ -11,4 +9,3 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(5001);
->>>>>>> 990a7db155108c5bc7c47005f62c1acc6175367b
