@@ -43,8 +43,24 @@ app.get("/api/products/:productID/reviews/:reviewID", (req, res) => {
 
 // Query Paramaters
 app.get("/api/v1/query", (req, res) => {
-  console.log(req.query);
-  res.send("hello world");
+  const { search, limit } = req.query;
+  // console.log(search, limit);
+  let sortedProducts = [...products];
+  if (search) {
+    sortedProducts = sortedProducts.filter((product) =>
+      product.name.startsWith(search)
+    );
+  }
+  if (limit) {
+    sortedProducts = sortedProducts.slice(0, Number(limit));
+  }
+
+  if (sortedProducts.length < 1) {
+    // return res.status(200).send("resouces not avaliable");
+    return res.status(200).json({ sucess: true, data: [] });
+  }
+
+  res.status(200).json(sortedProducts);
 });
 
 app.all("*", (req, res) => {
