@@ -1,11 +1,12 @@
 const express = require("express");
 const app = express();
 const logger = require("./logger.js");
-const authorize = require("./authorization");
+const authorization = require("./authorization");
+
 
 // app.use("/api",logger);   ->>>>  whatever comes after /api -> 
 // /api is path here
-app.use([logger, authorize]);
+app.use([logger, authorization]);
 
 app.get("/", (req, res) => {
   res.send("<h1>Home</h1>");
@@ -26,3 +27,7 @@ app.get("/api/users", (req, res) => {
 app.listen(5000, () => {
   console.log("app is listening 5000 .....");
 });
+
+app.all("*",(req,res)=>{
+  res.send('Resources not found')
+})
