@@ -1,6 +1,5 @@
 const { people } = require("../data");
 
-
 const getPeoples = (req, res) => {
   res.status(200).json({ success: "true", data: people });
 };

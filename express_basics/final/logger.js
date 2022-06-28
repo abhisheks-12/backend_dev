@@ -7,8 +7,4 @@ const logger = (req, res, next) => {
 };
 
 
-async function readData(){
-  
-}
-
 module.exports = logger;

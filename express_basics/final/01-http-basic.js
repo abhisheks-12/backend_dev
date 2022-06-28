@@ -29,7 +29,6 @@ const server = http.createServer((req, res) => {
 server.listen(5002);
 */
 
-
 // using http module to
 //  send request server side rendering
 

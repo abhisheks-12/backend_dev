@@ -3,8 +3,7 @@ const app = express();
 const logger = require("./logger.js");
 const authorization = require("./authorization");
 
-
-// app.use("/api",logger);   ->>>>  whatever comes after /api -> 
+// app.use("/api",logger);   ->>>>  whatever comes after /api ->
 // /api is path here
 app.use([logger, authorization]);
 
@@ -28,6 +27,6 @@ app.listen(5000, () => {
   console.log("app is listening 5000 .....");
 });
 
-app.all("*",(req,res)=>{
-  res.send('Resources not found')
-})
+app.all("*", (req, res) => {
+  res.send("Resources not found");
+});
