@@ -1,27 +1,29 @@
-const getUsers = (req, res) => {
-  res.send("Get Users");
+const Tasks = require("../models/task");
+
+const getTasks = (req, res) => {
+  res.send("Get task");
 };
 
-const getSingleUser = (req, res) => {
-  res.send("Get Single Users");
+const getSingleTask = (req, res) => {
+  res.send("Get Single task");
 };
 
-const createUser = (req, res) => {
-  res.send("User Created");
+const createTask = (req, res) => {
+  res.send("task Created");
 };
 
-const updateUser = (req, res) => {
-  res.send("Updated User");
+const updateTask = (req, res) => {
+  res.send("Updated task");
 };
 
-const deleteUser = (req, res) => {
-  res.send("User Deleted");
+const deleteTask = (req, res) => {
+  res.send("task Deleted");
 };
 
 module.exports = {
-  getUsers,
-  getSingleUser,
-  createUser,
-  updateUser,
-  deleteUser,
+  getTasks,
+  getSingleTask,
+  createTask,
+  updateTask,
+  deleteTask,
 };
