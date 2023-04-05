@@ -1,0 +1,4 @@
+- completed upto 5 videos complete upload files thing
+- revise auth , upload files and swagger'
+- if have time complete aws setup
+- 
