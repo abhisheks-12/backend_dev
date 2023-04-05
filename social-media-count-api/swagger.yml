@@ -1,0 +1,76 @@
+openapi: 3.0.0
+
+info:
+  title: Social Media Count
+  description: Simple get api with hardcoded data.
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:4000/api/v1
+    description: Returns user details
+
+paths:
+  /instagram:
+    get:
+      summary: Returns username , following and followers.
+      description: Optional extended description in CommonMark or HTML.
+      responses:
+        '200': # status code
+          description: A JSON structure of user details
+          content:
+            application/json:
+              schema:
+                type:
+                properties:
+                  username:
+                    type: string
+                  followers:
+                    type: string
+
+                  follows: type:string
+                items:
+                  type: json
+
+  /linkedin:
+    get:
+      summary: Returns username , following and followers.
+      description: Optional extended description in CommonMark or HTML.
+      responses:
+        '200': # status code
+          description: A JSON structure of user details
+          content:
+            application/json:
+              schema:
+                type: json
+                items:
+                  type: json
+
+  /youtube:
+    get:
+      summary: Returns username , subscribers and  subscribed.
+      description: Optional extended description in CommonMark or HTML.
+      responses:
+        '200': # status code
+          description: A JSON structure of user details
+          content:
+            application/json:
+              schema:
+                type: json
+                items:
+                  type: json
+
+  /{id}:
+    get:
+      summary: Returns a user by ID.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Parameter description in CommonMark or HTML.
+          schema:
+            type: string
+            format: json
+            minimum: 1
+      responses:
+        '200':
+          description: OK
